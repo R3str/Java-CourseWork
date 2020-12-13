@@ -228,7 +228,7 @@ public class Controller
     {
         TextInputDialog dialog = new TextInputDialog("New Process");
         dialog.setTitle("Creating New Process");
-        dialog.setHeaderText("Enter the name of a new process.\nUse only letters, numbers, '-' and '_'");
+        dialog.setHeaderText("Enter the name of a new process.\nUse only letters, numbers and these symbols '-' and '_'");
         dialog.setContentText("Process name:");
 
         Button btnOk = (Button) dialog.getDialogPane().lookupButton(ButtonType.OK);
@@ -262,12 +262,12 @@ public class Controller
                 }
                 else
                 {
-                    dialog.setHeaderText("You should use only\nletters, numbers, '-' and '_'");
+                    dialog.setHeaderText("You should use only\nletters, numbers and these symbols '-' and '_'");
                 }
             }
             else
             {
-                dialog.setHeaderText("You should use only\nletters, numbers, '-' and '_'");
+                dialog.setHeaderText("You should use only\nletters, numbers and these symbols '-' , '_'");
             }
         });
 

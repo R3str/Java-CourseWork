@@ -106,7 +106,7 @@ public class TaskScheduler implements ITickable
         MemoryBlock memory = memoryScheduler.fillMemoryBlock(task.getMemoryUsage());
         if(memory == null)
         {
-            rejectProcess(task);
+            addRejectProcess(task);
             return false;
         }
 
@@ -136,7 +136,7 @@ public class TaskScheduler implements ITickable
         Main.guiController.updateTasksFinished();
     }
 
-    public void rejectProcess(Process process)
+    public void addRejectProcess(Process process)
     {
         rejectsList.add(process);
         tasksRejected++;
